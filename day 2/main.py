@@ -98,3 +98,46 @@ ans = [int(calc(num)) for num in D]
 
 
 print(','.join(map(str, D)))
+
+
+# QUESTION 7: Write a program that accepts a comma separated sequence of words
+# as input and prints the words in a comma-separated sequence after sorting
+# them alphabetically.
+
+# Suppose the following input is supplied to the program:
+
+# without,hello,bag,world
+# Then, the output should be:
+
+# bag,hello,without,world
+# Hints:
+# In case of input data being supplied to the question, it should be assumed to be a console input.
+
+
+str_list = input('Enter comma seperated words').split(',')
+
+print(','.join(sorted(str_list)))
+
+
+# QUESTION 8: Write a program that accepts sequence of lines as input and prints
+# the lines after making all characters in the sentence uppercased.
+
+# Suppose the following input is supplied to the program:
+# Hello world
+# Practice makes perfect
+
+# Then, the output should be:
+# HELLO WORLD
+# PRACTICE MAKES PERFECT
+
+sentences = []
+
+while True:
+    sentence = input('Enter multiline sentences: ')
+    if sentence:
+        sentences.append(sentence.upper())
+    else:
+        break
+
+for sentence in sentences:
+    print(sentence)
