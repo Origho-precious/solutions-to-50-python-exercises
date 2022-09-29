@@ -97,4 +97,4 @@ D = [int(item) for item in D.split(',')]
 ans = [int(calc(num)) for num in D]
 
 
-print(ans)
+print(','.join(map(str, D)))
