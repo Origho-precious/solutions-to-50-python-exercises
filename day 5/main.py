@@ -9,6 +9,13 @@
 # In case of input data being supplied to the question, it should be assumed to be a console input.
 
 
+numbers = input('Enter comma seperated numbers: ').split(',')
+
+odd_numbers = [num for num in numbers if int(num) % 2 != 0]
+
+print(','.join(odd_numbers))
+
+
 # Question 17:
 # Write a program that computes the net amount of a bank account based a transaction log from console input. The transaction log format is shown as following:
 
@@ -26,3 +33,20 @@
 # 500
 # Hints:
 # In case of input data being supplied to the question, it should be assumed to be a console input.
+
+
+account_balance = 0
+
+while True:
+    log = input('Enter log entry: ')
+
+    if not log:
+        break
+
+    if log.startswith('D'):
+        account_balance += int(log.split(' ')[1])
+    elif log.startswith('W'):
+        account_balance -= int(log.split(' ')[1])
+
+
+print(account_balance)
