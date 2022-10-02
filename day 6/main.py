@@ -63,5 +63,27 @@ print(','.join([item for item in passwords if validate_password(item)]))
 
 # [('John', '20', '90'), ('Jony', '17', '91'),
 #  ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
+
 # Hints:
 # In case of input data being supplied to the question, it should be assumed to be a console input.We use itemgetter to enable multiple sort keys.
+
+
+my_tups = []
+
+while True:
+    input_value = input('Enter name, age, score: ').split(',')
+
+    if len(input_value) == 3:
+        t = (input_value[0].strip(), int(
+            input_value[1].strip()), int(input_value[2].strip()))
+
+        my_tups.append(t)
+    else:
+        break
+
+
+my_tups.sort(key=lambda x: x[2])
+my_tups.sort(key=lambda x: x[1])
+my_tups.sort(key=lambda x: x[0])
+
+print(my_tups)
