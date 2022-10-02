@@ -2,13 +2,13 @@
 # A website requires the users to input username and password to register. Write a program to check the validity of password input by users.
 
 # Following are the criteria for checking the password:
-
 # At least 1 letter between [a-z]
 # At least 1 number between [0-9]
 # At least 1 letter between [A-Z]
 # At least 1 character from [$#@]
 # Minimum length of transaction password: 6
 # Maximum length of transaction password: 12
+
 # Your program should accept a sequence of comma separated passwords and will check them according to the above criteria. Passwords that match the criteria are to be printed, each separated by a comma.
 
 # Example
@@ -22,7 +22,27 @@
 # Hints:
 # In case of input data being supplied to the question, it should be assumed to be a console input.
 
+import re
 
+passwords = input('Enter comma seperated passwords: ').split(',')
+
+
+def validate_password(password):
+    if (len(password) < 6 or len(password) > 12):
+        return ''
+    if re.search(r'[0-9]+', password) is None:
+        return ''
+    if re.search(r'[a-z]+', password) is None:
+        return ''
+    if re.search(r'[A-Z]+', password) is None:
+        return
+    if re.search(r'[$#@]+', password) is None:
+        return ''
+
+    return password
+
+
+print(','.join([item for item in passwords if validate_password(item)]))
 
 # Question 19:
 # You are required to write a program to sort the (name, age, score) tuples by ascending order where name is string, age and score are numbers. The tuples are input by console. The sort criteria is:
