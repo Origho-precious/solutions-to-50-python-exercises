@@ -20,10 +20,10 @@
 # Hints
 # In case of input data being supplied to the question, it should be assumed to be a console input.
 
-# input_value = input('Enter sentence: ').split(' ')
+input_value = input('Enter sentence: ').split(' ')
 
-# for word in sorted(input_value):
-#     print(f'{word}: {input_value.count(word)}')
+for word in sorted(input_value):
+    print(f'{word}: {input_value.count(word)}')
 
 
 # Question 23:
@@ -32,11 +32,13 @@
 # Hints:
 # Using the ** operator which can be written as n**p where means n ^ p
 
-# def sqr(n):
-#     return n**2
+def sqr(n):
+    return n**2
 
 
-# sqr(2)
+sqr(2)
+
+print(sqr.__doc__)
 
 # Question 24:
 # Python has many built-in functions, and if you do not know how to use it, you can read document online or find some books. But Python has a built-in document function for every built-in functions.
@@ -57,7 +59,7 @@ print_doc(abs)
 print_doc(str)
 
 
-def sqr(num):
+def sqr_num(num):
     '''Return the square value of the input number.
 
     The input number must be integer.
@@ -66,10 +68,23 @@ def sqr(num):
     return num ** 2
 
 
-print(sqr.__doc__)
+print(sqr_num.__doc__)
 
 # Question 25:
 # Define a class, which have a class parameter and have a same instance parameter.
 
 # Hints:
 # Define an instance parameter, need add it in __init__ method.You can init an object with construct parameter or set the value later
+
+
+class House:
+    name = 'Penthouse'
+
+    def __init__(self, name):
+        self.name = name
+
+
+bungalow = House('Bungalow')
+duplex = House('Duplex')
+
+print(bungalow.name, duplex.name, House.name)
