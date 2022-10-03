@@ -48,6 +48,12 @@ sqr(2)
 # Hints:
 # The built-in document method is __doc__
 
+def print_doc(mth):
+    print(mth.__doc__)
+
+
+print_doc(abs(2))
+print_doc(str(2))
 
 # Question 25:
 # Define a class, which have a class parameter and have a same instance parameter.
