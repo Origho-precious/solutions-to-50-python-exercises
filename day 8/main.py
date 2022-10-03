@@ -32,11 +32,11 @@
 # Hints:
 # Using the ** operator which can be written as n**p where means n ^ p
 
-def sqr(n):
-    return n**2
+# def sqr(n):
+#     return n**2
 
 
-sqr(2)
+# sqr(2)
 
 # Question 24:
 # Python has many built-in functions, and if you do not know how to use it, you can read document online or find some books. But Python has a built-in document function for every built-in functions.
@@ -48,12 +48,25 @@ sqr(2)
 # Hints:
 # The built-in document method is __doc__
 
+
 def print_doc(mth):
     print(mth.__doc__)
 
 
-print_doc(abs(2))
-print_doc(str(2))
+print_doc(abs)
+print_doc(str)
+
+
+def sqr(num):
+    '''Return the square value of the input number.
+
+    The input number must be integer.
+    '''
+
+    return num ** 2
+
+
+print(sqr.__doc__)
 
 # Question 25:
 # Define a class, which have a class parameter and have a same instance parameter.
