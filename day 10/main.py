@@ -17,6 +17,15 @@ create_dict()
 # Hints:
 # Use dict[key]=value pattern to put entry into a dictionary.Use ** operator to get power of a number.Use range() for loops.Use keys() to iterate keys in the dictionary. Also we can use item() to get key/value pairs.
 
+def print_dict_keys():
+    my_dict = {num: num**2 for num in range(1, 21)}
+
+    for item in list(my_dict.keys()):
+        print(item)
+
+
+print_dict_keys()
+
 
 # Question 33:
 # Define a function which can generate and print a list where the values are square of numbers between 1 and 20 (both included).
