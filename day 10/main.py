@@ -4,6 +4,11 @@
 # Hints:
 # Use dict[key]=value pattern to put entry into a dictionary.Use ** operator to get power of a number.Use range() for loops.
 
+def create_dict():
+    print({num: num**2 for num in range(1, 21)})
+
+
+create_dict()
 
 
 # Question 32:
