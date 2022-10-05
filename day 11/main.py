@@ -6,7 +6,7 @@
 
 my_tup = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 
-print(' '.join(map(lambda num: str(num), my_tup[0:5])))
+print(' '.join(map(str, my_tup[0:5])))
 
 # Question 39:
 # Write a program to generate and print another tuple whose values are even numbers in the given tuple(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).
@@ -28,13 +28,22 @@ print(tuple(even_nums))
 # Hints:
 # Use if statement to judge condition.
 
+input_value = input('Enter any string: ')
+
+if input_value == 'yes' or input_value == 'Yes' or input_value == 'YES':
+    print('Yes')
+else:
+    print('No')
 
 # Question 41:
 # Write a program which can map() to make a list whose elements are square of elements in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].
 
 # Hints:
-# Use map() to generate a list.Use lambda to define anonymous functions.
+# Use map() to generate a list. Use lambda to define anonymous functions.
 
+square_nums = map(lambda num: num**2, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+print(list(square_nums))
 
 # Question 42:
 # Write a program which can map() and filter() to make a list whose elements are square of even number in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].
