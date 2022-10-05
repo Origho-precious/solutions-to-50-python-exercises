@@ -51,9 +51,21 @@ print(list(square_nums))
 # Hints:
 # Use map() to generate a list.Use filter() to filter elements of a list.Use lambda to define anonymous functions.
 
+num_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+filtered_num_list = list(filter(lambda num: num % 2 == 0, num_list))
+
+even_num_square = list(map(lambda num: num ** 2, filtered_num_list))
+
+print(even_num_square)
+
 
 # Question 43:
 # Write a program which can filter() to make a list whose elements are even number between 1 and 20 (both included).
 
 # Hints:
 # Use filter() to filter elements of a list.Use lambda to define anonymous functions.
+
+even_nums = filter(lambda num: num % 2 == 0, range(1, 21))
+
+print(list(even_nums))
