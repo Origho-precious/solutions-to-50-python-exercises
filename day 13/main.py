@@ -61,7 +61,7 @@ class Square(Shape):
 
 
 Asqr = Square(5)
-print(Asqr.area())      # prints 25 as given argument
+print(Asqr.area()) 
 
 print(Square().area())
 
