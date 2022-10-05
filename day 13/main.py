@@ -4,8 +4,10 @@
 # Hints
 # Use def methodName(self) to define a method.
 
+class Circle()
 
-# Question 48:
+
+Question 48:
 # Define a class named Rectangle which can be constructed by a length and width. The Rectangle class has a method which can compute the area.
 
 # Hints
