@@ -33,12 +33,26 @@ print_dict_keys()
 # Hints:
 # Use ** operator to get power of a number.Use range() for loops.Use list.append() to add values into a list.
 
+def gen_list():
+    numbers = [num**2 for num in range(1, 21)]
+    print(numbers)
+
+
+gen_list()
+
 
 # Question 34:
 # Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). Then the function needs to print the first 5 elements in the list.
 
 # Hints:
 # Use ** operator to get power of a number.Use range() for loops.Use list.append() to add values into a list.Use[n1:n2] to slice a list
+
+def gen_list2():
+    numbers = [num**2 for num in range(1, 21)]
+    print(numbers[0:5])
+
+
+gen_list2()
 
 
 # Question 35:
@@ -47,14 +61,38 @@ print_dict_keys()
 # Hints:
 # Use ** operator to get power of a number.Use range() for loops.Use list.append() to add values into a list.Use[n1:n2] to slice a list
 
+def gen_list3():
+    numbers = [num**2 for num in range(1, 21)]
+    print(numbers[-5:])
+
+
+gen_list3()
+
+
 # Question 36:
 # Define a function which can generate a list where the values are square of numbers between 1 and 20 (both included). Then the function needs to print all values except the first 5 elements in the list.
 
 # Hints: Use ** operator to get power of a number.Use range() for loops.Use list.append() to add values into a list.Use[n1:n2] to slice a list
 
+def gen_list4():
+    numbers = [num**2 for num in range(1, 21)]
+    print(numbers[:5])
+
+
+gen_list4()
 
 # Question 37:
 # Define a function which can generate and print a tuple where the value are square of numbers between 1 and 20 (both included).
 
 # Hints:
 # Use ** operator to get power of a number.Use range() for loops.Use list.append() to add values into a list.Use tuple() to get a tuple from a list.
+
+
+def gen_list5():
+    numbers = [num**2 for num in range(1, 21)]
+    numbers = tuple(numbers)
+
+    print(numbers)
+
+
+gen_list5()
